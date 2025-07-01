@@ -8,22 +8,23 @@
     <title>Loot Box Geek</title>
 </head>
 
-<body>
-    <!-- navbar -->
+    <!-- navbar -->     
     <header>
         <div class="interface">
 
-            <img src="assets/img/logo-removebg-preview.png" alt="logotipo">
-            <nav>
-                <ul>
-                    <li><a href="index.html">início</a></li>
-                    <li><a href="#">destaques</a></li>
-                    <li><a href="#">eventos</a></li>
-                </ul>
-            </nav>
-            <section class="btn-modal">
-                <button class="open-modal" data-modal="modal-1"><a href="#">login</a></button>
-                <button class="open-modal" data-modal="modal-2"><a href="#">cadastre-se</a></button>
+            <section class="box-header">
+                <img src="assets/img/logo-removebg-preview.png" alt="logotipo" id="logo-header">
+                <nav>
+                    <ul>
+                        <li><a href="index.html">início</a></li>
+                        <li><a href="#">destaques</a></li>
+                        <li><a href="#">eventos</a></li>
+                    </ul>
+                </nav>
+                <section class="btn-modal">
+                    <button class="open-modal" data-modal="modal-1"><a href="#">login</a></button>
+                    <button class="open-modal" data-modal="modal-2"><a href="#">cadastre-se</a></button>
+                </section>
             </section>
 
         </div>
@@ -39,7 +40,8 @@
             </section>
             
             <section class="form">
-                <form action="" method="post" id="">
+
+                <form action="../src/testLogin.php" method="post" id="">
                     <!-- email -->
                 <label for="email">E-mail </label>
                 <input
@@ -67,6 +69,7 @@
             <!-- botão para navegar até o modal de cadastro -->
             <button class="nav-modal" data-modal="modal-2">Cadastre-se</button>
         </div>
+
     </dialog>
 
     <dialog id="modal-2">
