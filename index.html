@@ -29,36 +29,44 @@
         </div>
     </header>
     <!-- /navbar -->
+
     <!-- modal para form de login e cadastro -->
     <dialog id="modal-1">
-        <section class="title">
-            <h1>Login</h1>
-            <button class="close-modal" data-modal="modal-1">x</button>
-        </section>
-        
-        <section class="form">
-            <form action="" method="post" id="">
-            <label for="email">E-mail: </label>
-            <input
-                type="text"
-                name="email"
-                placeholder="Seu melhor e-mail" 
-                maxlength="25">
+        <div class="modal-container">
+            <section class="title">
+                <h1>Login</h1>
+                <button class="close-modal" data-modal="modal-1">x</button>
+            </section>
+            
+            <section class="form">
+                <form action="" method="post" id="">
+                    <!-- email -->
+                <label for="email">E-mail </label>
+                <input
+                    type="text"
+                    name="email"
+                    placeholder="Seu melhor e-mail"
+                    maxlength="25">
 
-            <label for="senha">Senha: </label>
-            <input
-                type="password"
-                name="senha" 
-                placeholder="•••••••••" 
-                maxlength="25">
+                    <!-- senha -->
+                <label for="senha">Senha </label>
+                <input
+                    type="password"
+                    name="senha"
+                    placeholder="•••••••••"
+                    maxlength="25">
 
-            <input
-                type="submit"
-                name="submit"
-                value="Entrar">
-        </form>
-        </section>
-        <button class="nav-modal" data-modal="modal-2">Cadastre-se</button>
+                    <!-- submit -->
+                <input
+                    type="submit"
+                    name="submit"
+                    value="Entrar">
+            </form>
+            </section>
+
+            <!-- botão para navegar até o modal de cadastro -->
+            <button class="nav-modal" data-modal="modal-2">Cadastre-se</button>
+        </div>
     </dialog>
 
     <dialog id="modal-2">

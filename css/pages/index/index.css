@@ -1,8 +1,26 @@
 @import url('../../global/global.css');
 @import url('partials/header.css');
 @import url('partials/main.css');
+@import url('partials/modal-1.css');
+@import url('partials/modal-2.css');
+
 
 /* Estilo dos modais da página */
-#modal-1{
-    
+dialog{
+    padding: 30px;
+    border-radius: 20px 36px;
+    border: none;
+    background-color: #ececec;
+    /* color: #fff;     */
 }
+
+dialog::backdrop{
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.modal-container{
+    display: flex;
+    flex-direction: column;
+    min-width: 380px;
+}
+
