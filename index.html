@@ -1,63 +1,98 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-
-        body{
-            background-color: #F2B138; /* definitivo */
-        }
-        #hero{
-            background-color: black;
-            /* color: aliceblue; */
-        }
-
-        article{
-            background-color: lightcoral;
-        }
-
-        #img-hero{
-            display: inline-block;
-            background-color: blueviolet;
-        }
-
-       #img-hero img{
-            height: 20rem;
-        }
-
-        #img-hero img.tamanho{
-            height: 46px;
-            background-color: lightgreen;
-        }
-    </style>
+    <link rel="stylesheet" href="css/pages/index/index.css">
     <title>Loot Box Geek</title>
 </head>
+
 <body>
-<!-- navbar -->
+    <!-- navbar -->
+    <header>
+        <div class="interface">
 
- <!-- /navbar -->
+            <img src="./img/logo-removebg-preview.png" alt="logotipo">
+            <nav>
+                <ul>
+                    <li><a href="index.html">início</a></li>
+                    <li><a href="#">destaques</a></li>
+                    <li><a href="#">eventos</a></li>
+                </ul>
+            </nav>
+            <section class="btn-modal">
+                <button class="open-modal" data-modal="modal-1"><a href="#">login</a></button>
+                <button class="open-modal" data-modal="modal-2"><a href="#">cadastre-se</a></button>
+            </section>
 
- <main>
-    <section id="hero">
-        <article>
-            <p>Tenha seus pedidos personalizados</p>
-            <h1>Loot Box Geek</h1>
-            <p>Melhor que loot de boss raid: caixas cheias de tech, games e geekices pra chamar de suas!</p>
-
-            <button>saiba mais</button>
-        </article>
-
-        <div id="img-hero">
-            <img src="img/blusa_geek_pixel-removebg-preview.png" alt="" class="tamanho img1" >
-            <img src="img/console_portatil_pixel-removebg-preview.png" alt="" class="tamanho img2" >
-            <img src="img/controle_retro_pixel-removebg-preview.png" alt="" class="tamanho img3" >
-            <img src="img/logo-removebg-preview.png" alt="pc-flutuante">
-            <!-- img da sombra (faltando) -->
         </div>
-    </section>
+    </header>
+    <!-- /navbar -->
+    <!-- modal para form de login e cadastro -->
+    <dialog id="modal-1">
+        <section class="title">
+            <h1>Login</h1>
+            <button class="close-modal" data-modal="modal-1">x</button>
+        </section>
+        
+        <section class="form">
+            <form action="" method="post" id="">
+            <label for="email">E-mail: </label>
+            <input
+                type="text"
+                name="email"
+                placeholder="Seu melhor e-mail" 
+                maxlength="25">
+
+            <label for="senha">Senha: </label>
+            <input
+                type="password"
+                name="senha" 
+                placeholder="•••••••••" 
+                maxlength="25">
+
+            <input
+                type="submit"
+                name="submit"
+                value="Entrar">
+        </form>
+        </section>
+        <button class="nav-modal" data-modal="modal-2">Cadastre-se</button>
+    </dialog>
+
+    <dialog id="modal-2">
+        <section class="title">
+            <h1>Cadastre-se</h1>
+            <button class="close-modal" data-modal="modal-2">x</button>            
+        </section>        
+        <button class="nav-modal" data-modal="modal-1">Acesse</button>
+    </dialog>
+
+    <main>
+        <section id="hero">
+            <div class="interface">
+                <article>
+                    <p>Tenha seus pedidos personalizados</p>
+                    <h1>Loot Box Geek</h1>
+                    <p>Melhor que loot de boss raid: caixas cheias de tech, games e geekices pra chamar de suas!</p>
+                    <button>saiba mais</button>
+                </article>
+                <div id="img-hero">
+                    <img src="img/blusa_geek_pixel-removebg-preview.png" alt="" class="tamanho img1">
+                    <img src="img/console_portatil_pixel-removebg-preview.png" alt="" class="tamanho img2">
+                    <img src="img/controle_retro_pixel-removebg-preview.png" alt="" class="tamanho img3">
+                    <img src="img/logo-removebg-preview.png" alt="pc-flutuante">
+                    <!-- img da sombra (faltando) -->
+                </div>
+            </div>
+        </section>
 
 
- </main>
+    </main>
+
+
+    <script src="script.js"></script>
 </body>
+
 </html>

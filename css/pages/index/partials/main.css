@@ -1,0 +1,23 @@
+#hero {
+    background-color: black;
+    width: 100%;
+    /* color: aliceblue; */
+}
+
+article {
+    background-color: lightcoral;
+}
+
+#img-hero {
+    display: inline-block;
+    background-color: blueviolet;
+}
+
+#img-hero img {
+    height: 20rem;
+}
+
+#img-hero img.tamanho {
+    height: 46px;
+    background-color: lightgreen;
+}
