@@ -9,14 +9,27 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
 
+}
+
+.box-header nav ul{
+    display: flex;
+    gap: 50px;
+}
+
+.box-header nav ul li{
+    list-style: none;
+    
+}
+
+.box-header nav ul li a{
+    text-decoration: none;
 }
 
 #logo-header{
     width: 70px;
 }
-
-
 
 
 
