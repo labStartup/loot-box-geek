@@ -8,14 +8,86 @@
         body{
             background-color: #F2B138; /* definitivo */
         }
+
+        header{
+            background-color: bisque;
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        .interface{
+            width: 100%;
+        }
+
+        .box-header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+        
+        .box-header nav ul{
+            display: flex;
+            gap: 50px;
+        }
+
+        .box-header nav ul li{
+            list-style: none;
+            
+        }
+
+        .box-header nav ul li a{
+            text-decoration: none;
+        }
+        
+        #logo-header{
+            width: 70px;
+        }
+
+        .central{
+            margin-right: 250px;
+        }
+
         #hero{
             background-color: black;
-            /* color: aliceblue; */
+            color: white;
+            padding-left: 110px;
+            padding-right: 110px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            /* flex-wrap: wrap; */
         }
 
         article{
             background-color: lightcoral;
         }
+
+        #hero article {
+            flex: 1;
+            min-width: 300px;
+            padding: 20px;
+            justify-items: right;
+            align-items: center;
+        }
+
+        #hero h1{
+            font-size: 64px;
+            color: #000;
+        }
+
+        #hero p{
+            font-size: 24px;
+            color: #000;
+        }
+
+        #hero button{
+            display: flex;
+            font-size: 24px;
+            justify-items: right;
+            color: #000;
+        }
+
 
         #img-hero{
             display: inline-block;
@@ -23,39 +95,118 @@
         }
 
        #img-hero img{
-            height: 20rem;
+            height: 500px;
         }
 
         #img-hero img.tamanho{
             height: 46px;
             background-color: lightgreen;
         }
+
+        .destaque{
+            display: flex;
+            background-color: rgba(173, 118, 50, 0.76);
+            align-items: center;
+            text-align: justify;
+            flex-direction: row;
+            width: 1826px;
+            height: 541px;
+            border-radius: 20px;
+            margin-left: 3vh;
+        }
+
+        .destaquegeek{
+            margin: 100px;
+        }
+
+        .principal{
+            height: 330px;
+            width: 300px;
+            border-radius: 5px;
+        }
+
+        h2{
+            background-color: lightslategray;
+            margin-left: 4.5vh;
+            font-size: 40px;
+            margin-bottom: -0.3px;
+            margin-top: 300px;
+        }
+
+        /* muito específico */
+        span{
+            display: flex;
+            justify-content: right;
+        }
+        /* /muito específico */
     </style>
+
     <title>Loot Box Geek</title>
 </head>
 <body>
 <!-- navbar -->
+<header>
+    <div class="interface">
 
+        <section class="box-header">
+            <img src="assets/img/logo-removebg-preview.png" alt="logotipo" id="logo-header">
+            <nav>
+                <ul>
+                    <li><a href="index.html">início</a></li>
+                    <li><a href="#">destaques</a></li>
+                    <li><a href="#">eventos</a></li>
+                </ul>
+            </nav>
+            <section class="btn-modal">
+                <button class="open-modal" data-modal="modal-1"><a href="#">login</a></button>
+                <button class="open-modal" data-modal="modal-2"><a href="#">cadastre-se</a></button>
+            </section>
+        </section>
+
+    </div>
+</header>
  <!-- /navbar -->
 
  <main>
-    <section id="hero">
+    <section id="hero" class="central">
         <article>
             <p>Tenha seus pedidos personalizados</p>
-            <h1>Loot Box Geek</h1>
+            <h1><span>Loot</span>Box Geek</h1>
             <p>Melhor que loot de boss raid: caixas cheias de tech, games e geekices pra chamar de suas!</p>
 
             <button>saiba mais</button>
         </article>
 
         <div id="img-hero">
-            <img src="img/blusa_geek_pixel-removebg-preview.png" alt="" class="tamanho img1" >
-            <img src="img/console_portatil_pixel-removebg-preview.png" alt="" class="tamanho img2" >
-            <img src="img/controle_retro_pixel-removebg-preview.png" alt="" class="tamanho img3" >
+            <img src="img/blusa_geek_pixel-removebg-preview.png" alt="blusa-icon" class="tamanho img1" >
+            <img src="img/console_portatil_pixel-removebg-preview.png" alt="console-icon" class="tamanho img2" >
+            <img src="img/controle_retro_pixel-removebg-preview.png" alt="controle-icon" class="tamanho img3" >
             <img src="img/logo-removebg-preview.png" alt="pc-flutuante">
-            <!-- img da sombra (faltando) -->
+            <!-- img da sombra (faltando) esqueci de pegar no pc de casa-->
         </div>
     </section>
+
+
+    <h2>Destaques Geek</h2>
+    <div class="destaque">
+        <div class="destaquegeek">
+            <img src="img/camisa do batman.webp" alt="roupa" class="principal">
+            <h3>Roupas</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+        </div>
+        
+        <div class="destaquegeek">
+            <img src="img/caminho-da-sua-imagem2.jpg" alt="brinde" class="principal">
+            <h3>Brindes</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+        </div>
+        
+        <div class="destaquegeek">
+            <img src="img/caminho-da-sua-imagem3.jpg" alt="copo" class="principal">
+            <h3>Copos</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+        </div>
+    </div>
 
 
  </main>
