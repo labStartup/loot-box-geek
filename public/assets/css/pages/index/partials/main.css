@@ -23,10 +23,11 @@ article {
 } */
 
 #hero{
-    background-color: black;
+    width: 100%;
+    /* background-color: black; */
     color: white;
-    padding-left: 110px;
-    padding-right: 110px;
+    /* padding-left: 110px; */
+    /* padding-right: 110px; */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -38,7 +39,7 @@ article {
 }
 
 article{
-    background-color: lightcoral;
+    /* background-color: lightcoral; */
 }
 
 #hero article {
@@ -78,7 +79,7 @@ article{
 
 #img-hero{
     display: inline-block;
-    background-color: blueviolet;
+    /* background-color: blueviolet; */
 }
 
 #img-hero img{
@@ -87,7 +88,7 @@ article{
 
 #img-hero img.tamanho{
     height: 46px;
-    background-color: lightgreen;
+    /* background-color: lightgreen; */
 }
 
 .destaque{
@@ -113,7 +114,7 @@ article{
 }
 
 h2.titulo-destaque{
-    background-color: lightslategray;
+    /* background-color: lightslategray; */
     margin-left: 4.5vh;
     font-size: 40px;
     margin-bottom: -0.3px;

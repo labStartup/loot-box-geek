@@ -24,4 +24,24 @@ dialog::backdrop{
     min-width: 380px;
 }
 
+/* Estilo do header dos dois modais */
+#modal-1 .title, #modal-2 .title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 10px;
+    color: #1d1c1c;
+}
+
+#modal-1 .title button.close-modal, #modal-2 .title button.close-modal{
+    display: inline-block;
+    background-color: transparent;
+    border: none;
+    color: #1d1c1c;
+    font-size: 25px;
+    cursor: pointer;
+    transition: .5s;
+}
+
 

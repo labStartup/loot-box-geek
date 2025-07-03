@@ -34,6 +34,7 @@
 <!-- modal para form de login e cadastro -->
 <dialog id="modal-1">
     <div class="modal-container">
+
         <section class="title">
             <h1>Login</h1>
             <button class="close-modal" data-modal="modal-1">x</button>
@@ -53,40 +54,81 @@
                 <!-- submit -->
                 <input type="submit" name="submit" value="Entrar">
             </form>
+
         </section>
 
         <!-- botão para navegar até o modal de cadastro -->
         <button class="nav-modal" data-modal="modal-2">Cadastre-se</button>
     </div>
-
 </dialog>
 
 <dialog id="modal-2">
-    <section class="title">
-        <h1>Cadastre-se</h1>
-        <button class="close-modal" data-modal="modal-2">x</button>
-    </section>
-    <button class="nav-modal" data-modal="modal-1">Acesse</button>
+    <div class="modal-container">
+
+        <section class="title">
+            <h1>Cadastre-se</h1>
+            <button class="close-modal" data-modal="modal-2">x</button>
+        </section>
+
+        <section class="form-cadastro">
+
+            <form action="" method="post">
+
+                <!-- username -->
+                <label for="username">
+                    Nickname </label>
+                <input 
+                    type="text"
+                    name="username"
+                    placeholder="Nickname"
+                    maxlength="25"
+                    required>
+
+                <!-- email -->
+                <label for="email">
+                    E-mail </label>
+                <input type="text" 
+                    name="email" 
+                    placeholder="Seu melhor e-mail"
+                    maxlength="25"
+                    required>
+
+                <!-- senha -->
+                <label for="senha">Senha </label>
+                <input type="password" name="senha" placeholder="•••••••••" maxlength="25">
+
+                <!-- submit -->
+                <input type="submit" name="submit" value="Entrar">
+
+            </form>
+
+        </section>
+
+
+
+        <button class="nav-modal" data-modal="modal-1">Acesse</button>
+
+    </div>
 </dialog>
 
 <main>
-    <section id="hero" class="central">
-        <article>
-            <p>Tenha seus pedidos personalizados</p>
-            <h1><span>Loot</span>Box Geek</h1>
-            <p>Melhor que loot de boss raid: caixas cheias de tech, games e geekices pra chamar de suas!</p>
-
-            <button>saiba mais</button>
-        </article>
-
-        <div id="img-hero">
-            <img src="./assets/img/index/blusa_geek_pixel-removebg-preview.png" class="tamanho img1">
-            <img src="./assets/img/index/console_portatil_pixel-removebg-preview.png" alt="console-icon" class="tamanho img2">
-            <img src="./assets/img/index/controle_retro_pixel-removebg-preview.png" alt="controle-icon" class="tamanho img3">
-            <img src="./assets/img/global/logo-removebg-preview.png" alt="pc-flutuante">
-            <!-- img da sombra (faltando) esqueci de pegar no pc de casa-->
-        </div>
-    </section>
+    <div class="interface">
+        <section id="hero" class="">
+            <article>
+                <p>Tenha seus pedidos personalizados</p>
+                <h1><span>Loot</span>Box Geek</h1>
+                <p>Melhor que loot de boss raid: caixas cheias de tech, games e geekices pra chamar de suas!</p>
+                <button>saiba mais</button>
+            </article>
+            <div id="img-hero">
+                <img src="./assets/img/index/blusa_geek_pixel-removebg-preview.png" class="tamanho img1">
+                <img src="./assets/img/index/console_portatil_pixel-removebg-preview.png" alt="console-icon" class="tamanho img2">
+                <img src="./assets/img/index/controle_retro_pixel-removebg-preview.png" alt="controle-icon" class="tamanho img3">
+                <img src="./assets/img/global/logo-removebg-preview.png" alt="pc-flutuante">
+                <!-- img da sombra (faltando) esqueci de pegar no pc de casa-->
+            </div>
+        </section>
+    </div>
 
     <h2 class="titulo-destaque">Destaques Geek</h2>
     <div class="destaque">
