@@ -1,0 +1,213 @@
+/* 
+Aviso à equipe de font-end: esta foi uma versão de teste que Anderson e Iago geraram. Sinta-se a vontade para usar e testar.    
+*/
+
+:root {
+    --color-primary: #FFD700;
+    --color-secondary: #ff6f00;
+    --color-bg-dark: #121212;
+    --color-bg-light: #f9f9f9;
+    --color-text: #ffffff;
+    --color-footer-bg: #222;
+    --color-gray: #666;
+    --spacing-padding: 20px;
+    --radius-default: 10px;
+    --shadow-default: 0 4px 8px rgba(0, 0, 0, 0.2);
+    --shadow-hover: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Reset e base */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--color-bg-dark);
+    color: var(--color-text);
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    flex: 1;
+    padding-bottom: 100px; /* espaço para o rodapé fixo */
+}
+
+/* Header */
+header {
+    background-color: #333;
+    padding: var(--spacing-padding);
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5em;
+    color: var(--color-primary);
+}
+
+header p {
+    margin: 0;
+    color: var(--color-text);
+}
+
+/* Tipografia */
+h2 {
+    font-size: 2em;
+    color: var(--color-primary);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+}
+
+/* Animação */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+}
+
+.fade-in.visible {
+    opacity: 1;
+}
+
+/* Grid da equipe */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.team-grid > .team-member:nth-child(7) {
+    grid-column: 2 / 3; /* Centraliza o último membro na terceira linha */
+}
+
+/* Cartão do membro */
+.team-member {
+    background-color: var(--color-bg-light);
+    border-radius: var(--radius-default);
+    box-shadow: var(--shadow-default);
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.team-member:hover {
+    transform: scale(1.03);
+    box-shadow: var(--shadow-hover);
+}
+
+.team-member img {
+    width: 100%;
+    max-width: 180px;
+    border-radius: var(--radius-default);
+    transition: transform 0.3s ease;
+    margin-bottom: 10px;
+}
+
+.team-member:hover img {
+    transform: scale(1.05);
+}
+
+.team-member h3 {
+    color: var(--color-primary);
+    font-size: 1.5em;
+    margin-top: 10px;
+}
+
+.team-member p {
+    color: var(--color-gray);
+    font-size: 1em;
+}
+
+/* Informações extras escondidas inicialmente */
+.member-details {
+    display: none;
+    margin-top: 15px;
+    font-size: 0.9em;
+    color: var(--color-gray);
+}
+
+.team-member.expandido .member-details {
+    display: block;
+}
+
+/* Links sociais */
+.social-links {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.social-links a {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 8px 12px;
+    background-color: var(--color-primary);
+    color: var(--color-bg-dark);
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+}
+
+.social-links a:hover {
+    background-color: var(--color-secondary);
+}
+
+/* Acessibilidade */
+a:focus,
+button:focus,
+input:focus,
+textarea:focus,
+select:focus {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+}
+
+a,
+button,
+input,
+textarea,
+select {
+    transition: outline 0.3s ease;
+}
+
+/* Rodapé fixo */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--color-footer-bg);
+    color: var(--color-text);
+    text-align: center;
+    padding: 15px 0;
+    z-index: 100;
+}

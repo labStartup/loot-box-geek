@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nós - Loot Box Geek</title>
+    <!-- Link para o arquivo CSS -->
+    <link rel="stylesheet" href="assets/css/pages/about/about.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Loot Box Geek</h1>
+        <p>Conectando você ao universo geek de forma única</p>
+    </header>
+
+    <div class="container">
+        <section class="about fade-in">
+            <h2>Sobre Nós</h2>
+            <p>Somos mais do que uma equipe de desenvolvedores — somos apaixonados pelo universo geek. De consoles
+                clássicos aos RPGs de mesa, respiramos cultura geek em cada detalhe. Este projeto nasceu do nosso desejo
+                de criar um espaço que celebrasse tudo aquilo que nos move: tecnologia, criatividade, histórias épicas e
+                comunidades que ultrapassam fronteiras.
+
+                Acreditamos que ser geek é mais do que um estilo — é uma forma de ver o mundo com curiosidade, paixão e
+                imaginação. Cada parte da Loot Box Geek foi pensada para proporcionar uma experiência única para quem
+                vibra com jogos, animes, HQs, filmes, séries, colecionáveis e todas as maravilhas que fazem parte desse
+                universo.
+
+                Se você se emociona com finais de temporada, debates de teorias ou o cheiro de um quadrinho novo, este é
+                o seu lugar. Nossa missão é conectar pessoas com os conteúdos e produtos que mais amam — de fã para fã.
+            </p>
+            <div class="about-content">
+                <p>
+                    O Loot Box Geek é um projeto criado para os verdadeiros fãs da cultura geek. Nossa missão é oferecer
+                    uma experiência única para colecionadores, entusiastas de tecnologia, games, animes, filmes, séries,
+                    quadrinhos, ficção científica e muito mais.
+                </p>
+                <p>
+                    Nosso sistema permite aos usuários realizarem cadastros e aproveitarem promoções exclusivas,
+                    cashback, programas de pontos e ofertas personalizadas. Criamos um ambiente onde você pode explorar
+                    produtos e conteúdo geek de qualidade.
+                </p>
+            </div>
+        </section>
+
+        <section class="team-section fade-in">
+            <h2>Equipe</h2>
+            <div class="team-grid">
+                <!-- Membro 1 -->
+                <div class="team-member fade-in">
+                    <img src="img/Anderson Malheiros 1.jpg" alt="Anderson Malheiros">
+                    <h3>Anderson Malheiros</h3>
+                    <p>Desenvolvedor Front-End</p>
+                    <div class="social-links">
+                        <a href="mailto:anderson.malheiros.am@gmail.com">Email</a>
+                        <div class="member-details">
+                            <p>Gosta de React, TypeScript e criar interfaces incríveis. Apaixonado por cultura geek!</p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Membro 2 -->
+                <div class="team-member fade-in">
+                    <img src="img/Iago Souza.jpg" alt="Iago Souza">
+                    <h3>Iago Souza</h3>
+                    <p>Programador GPT</p>
+                    <div class="social-links">
+                        <a href="mailto:iagosouza56@hotmail.com">Email</a>
+                    </div>
+                </div>
+
+                <!-- Membro 3 -->
+                <div class="team-member fade-in">
+                    <img src="img/Fabrício.jpg" alt="Fabrício">
+                    <h3>Fabrício</h3>
+                    <p>Cozinheiro de Feijão</p>
+                    <div class="social-links">
+                        <a href="mailto:fabricioalexandres@hotmail.com">Email</a>
+                    </div>
+                </div>
+
+                <!-- Membro 4 -->
+                <div class="team-member fade-in">
+                    <img src="img/Romisson.jpg" alt="Romisson">
+                    <h3>Romisson</h3>
+                    <p>Desenvolvedor Front-End, Back-End</p>
+                    <div class="social-links">
+                        <a href="mailto:nascimentoromisson@gmail.com">Email</a>
+                    </div>
+                </div>
+
+                <!-- Membro 5 -->
+                <div class="team-member fade-in">
+                    <img src="img/Samuel.jpg" alt="Samuel Serra">
+                    <h3>Samuel Serra</h3>
+                    <p>Desenvolvedor Front-End e Back-End, Layout</p>
+                    <div class="social-links">
+                        <a href="mailto:samuelserra737@gmail.com">Email</a>
+                    </div>
+                </div>
+
+                <!-- Membro 6 -->
+                <div class="team-member fade-in">
+                    <img src="img/Victor.jpg" alt="Victor Silva">
+                    <h3>Victor Silva</h3>
+                    <p>Desenvolvedor Outro Patamar</p>
+                    <div class="social-links">
+                        <a href="mailto:victorsilva.lion@gmail.com">Email</a>
+                    </div>
+                </div>
+
+                <!-- Membro 7 -->
+                <div class="team-member fade-in">
+                    <img src="img/Wilson.jpg" alt="Wilson">
+                    <h3>Wilson</h3>
+                    <p>Desenvolvedor Front-End</p>
+                    <div class="social-links">
+                        <a href="mailto:juniorlins.m@gmail.com">Email</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2025 Loot Box Geek. Todos os direitos reservados.</p>
+        </footer>
+
+
+        <script>
+            // Função de animação de visibilidade ao rolar a página
+            document.addEventListener("DOMContentLoaded", function () {
+                const elements = document.querySelectorAll('.fade-in');
+                const observer = new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('visible');
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.2 });
+
+                elements.forEach(el => observer.observe(el));
+            });
+        </script>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                const members = document.querySelectorAll('.team-member');
+
+                members.forEach(member => {
+                    member.addEventListener('click', () => {
+                        member.classList.toggle('expandido');
+                    });
+                });
+            });
+        </script>
+
+
+</body>
+
+</html>
