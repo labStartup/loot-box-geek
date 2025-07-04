@@ -1,40 +1,120 @@
-@import url('../../global.css');
+@charset "UTF-8";
+@import url('partials/media_queries.css');
 
-div {
-    width: 800px;
-    height: 1000px;
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: rgb(255, 217, 0);
+    padding: 0;
+}
+
+main {
+    margin: 90px auto;
+    max-width: 1200px;
+}
+
+article {
+    max-height: auto;
+    max-width: 100%;
     background-color: rgb(156, 133, 0);
-    border-radius: 12px;
-    margin: 60px auto;
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: repeat(3, 400px);
+    grid-template-rows: repeat(4, 500px);
+    justify-content: space-evenly;
+    gap: 7px;
+    border: 4px black solid;
 }
+
 .produto {
-    width: 200px;
-    height: 200px;
-    background-color: whitesmoke;
+    overflow: hidden;
+    box-sizing: border-box;
 }
+
+.produto > img {
+    max-width: 300px;
+    height: 300px;
+    margin-left: 10px;
+    padding: 10px;
+    transition: 0.4s all ease-out;
+}
+
+.produto > img:hover { 
+    transform: scale(1.1);
+    transition: 0.3s all ease-in;
+    z-index: 1;
+}
+
+figcaption {
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    color: white;
+    font-size: 1.2em;
+    width: 100%;
+}
+
+.botoes {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    position: relative;
+    top: 10%;
+}
+
+.botao {
+    padding: 5px;
+    cursor: pointer;
+}
+
 aside {
     position: absolute;
     top: 0;
     left: 0;
     width: 300px;
-    height: 150%;
+    height: 285vh;
     background-color: rgb(156, 133, 0);
+    z-index: 100;
+    border-right: 4px groove #444;
+    transform: translateX(-100%);
 }
 
-p {
+aside > ul li {
     font-size: 2em;
     text-align: center;
-    width: 93%;
+    width: 100%;
     padding: 10px;
+    line-height: 35pt;
 }
 
-p:hover {
+aside > ul li:hover {
     background-color: rgba(240, 248, 255, 0.7);
     cursor: pointer;
 }
 
-h1 {
+aside h1 {
     text-align: center;
+}
+
+#botao-menu-lateral {
+    position: absolute;
+    top: 10px;
+    z-index: 100;
+    height: 50px;
+    width: 50px;
+    border: none;
+    border-radius: 18px;
+    background: url('../../../img/store/products/menu_button.png') no-repeat;
+    background-size: contain;
+    animation: acender 1.8s infinite;
+    cursor: pointer;
+}
+
+@keyframes acender {
+    0%, 100% { filter: initial }
+    50% { filter: brightness(1.5)}
 }

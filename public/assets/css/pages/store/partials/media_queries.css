@@ -1,0 +1,75 @@
+@charset "UTF-8";
+
+@media (max-width: 1215px) {
+    article {
+        display: grid;
+        grid-template-columns: repeat(2, 400px);
+        width: max-content;
+        margin: auto;
+        gap: 0px;
+    }
+}
+
+@media (max-width: 760px) {
+    main {margin-top: 50px; }
+
+    article {
+        display: grid;
+        grid-template-columns: 250px 250px;
+        grid-template-rows: 330px 330px;
+        align-items: center;
+    }
+
+    .produto {
+        height: 300px;
+    }
+
+    .produto > img {
+        max-width: 170px;
+        height: 170px;
+        margin: auto;
+    }
+
+    .produto figcaption {
+        font-size: 1em;
+    }
+
+    .botoes {
+        position: relative;
+        top: 5%;
+        display: flex;
+        gap: 20px;
+    }
+
+    .botao {
+        padding: 1px;
+    }
+
+    aside {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 300px;
+        height: 180vh;
+        background-color: rgb(156, 133, 0);
+        z-index: 100;
+        border-right: 4px groove #444;
+    }
+
+    aside > ul li {
+        font-size: 2em;
+        text-align: center;
+        width: 100%;
+        padding: 10px;
+        line-height: 35pt;
+    }
+
+    aside > ul li:hover {
+        background-color: rgba(240, 248, 255, 0.7);
+        cursor: pointer;
+    }
+
+    aside h1 {
+        text-align: center;
+    }
+}
