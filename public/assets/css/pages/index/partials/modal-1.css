@@ -1,0 +1,40 @@
+#modal-1 form{
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+    /* background-color: lightcyan; */
+}
+
+/* inputs */
+#modal-1 form input{
+    margin: 8px 0 20px 0;
+    padding: 12px;
+    font-size: 14px;
+    font-weight: 700;
+
+    border: 1px solid #1d1c1cab;
+    border-radius: 8px;
+    
+
+    transition: 0.2s;
+
+    &:focus{
+        outline: 2px solid var(--bg-primary);
+        box-shadow: 3px 3px 9px rgba(0, 0, 0, 0.5);
+        border: none;        
+    }    
+}
+
+#modal-1 form input[type="submit"]{
+    margin-bottom: 8px;
+    background-color: var(--bg-primary);
+    transition: .5s ease-in;
+    cursor: pointer;
+    
+    &:hover{
+        background-color: darkgoldenrod;
+        color: #fff;
+    }
+}
+
+

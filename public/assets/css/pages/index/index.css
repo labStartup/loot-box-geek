@@ -1,0 +1,47 @@
+@import url('../../global/global.css');
+@import url('partials/header.css');
+@import url('partials/main.css');
+@import url('partials/modal-1.css');
+@import url('partials/modal-2.css');
+
+
+/* Estilo dos modais da página */
+dialog{
+    padding: 30px;
+    border-radius: 20px 36px;
+    border: none;
+    background-color: #ececec;
+    /* color: #fff;     */
+}
+
+dialog::backdrop{
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.modal-container{
+    display: flex;
+    flex-direction: column;
+    min-width: 380px;
+}
+
+/* Estilo do header dos dois modais */
+#modal-1 .title, #modal-2 .title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 10px;
+    color: #1d1c1c;
+}
+
+#modal-1 .title button.close-modal, #modal-2 .title button.close-modal{
+    display: inline-block;
+    background-color: transparent;
+    border: none;
+    color: #1d1c1c;
+    font-size: 25px;
+    cursor: pointer;
+    transition: .5s;
+}
+
+
