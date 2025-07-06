@@ -12,7 +12,7 @@ openModal.forEach(button => {
         const modal = button.dataset.modal;
         // Pegar o id do dialog que tem o nome igual ao valor inserido no atributo data-modal:
         const modalId = document.getElementById(modal);
-        
+
         modalId.showModal();
     });
 });
@@ -20,8 +20,8 @@ openModal.forEach(button => {
 // Agora o mesmo para fechar o modal aberto
 const closeModal = document.querySelectorAll('.close-modal');
 
-closeModal.forEach(button =>{
-    button.addEventListener('click', ()=>{
+closeModal.forEach(button => {
+    button.addEventListener('click', () => {
 
         const modal = button.dataset.modal;
         const modalId = document.getElementById(modal);
@@ -33,20 +33,20 @@ closeModal.forEach(button =>{
 // Código para botões de navegação dentro do modal
 const navModal = document.querySelectorAll(".nav-modal");
 
-navModal.forEach(button =>{
+navModal.forEach(button => {
     // Se houver um click neste button
-    button.addEventListener('click', ()=>{        
+    button.addEventListener('click', () => {
         // Verifica o valor do atributo data-modal
         const modalGoOpen = button.dataset.modal;
-        
+
         // Pegar o modal que queremos abrir
         const modalId = document.getElementById(modalGoOpen);
-        
-        
-        if (modalGoOpen == "modal-1"){
+
+
+        if (modalGoOpen == "modal-1") {
             // console.log("Vamos abrir o login");
             const modalGoClose = document.getElementById("modal-2");
-            
+
             // Vamos fechar este modal:
             modalGoClose.close();
 
@@ -55,7 +55,7 @@ navModal.forEach(button =>{
 
 
         }
-        else{
+        else {
             // console.log("Vamos abrir o cadastro");
             const modalGoClose = document.getElementById("modal-1");
             // Vamos fechar este modal:
@@ -66,6 +66,23 @@ navModal.forEach(button =>{
         }
     });
 });
+
+// ********************** Informar que email já cadastrado **********************
+// Passa o valor do PHP para o JavaScript
+const phpData = document.getElementById('emailMessage');
+const variable = parseInt(phpData.dataset.variable);
+
+// Verifica e manipula o span
+if (variable === 1) {
+    const modalCad = document.getElementById("modal-2");
+    modalCad.showModal();
+    phpData.style.display = "inline";
+    phpData.style.color = "red";
+    phpData.innerText = "Email já cadastrado";
+} else{
+    phpData.sytle.disply = "none";    
+}
+// ********************** /informe de cadastro *************************
 /* /index.php */
 
 /* ************************************************************************ */
@@ -111,5 +128,7 @@ botao_menu_lateral.addEventListener('click', botao => {
         menu_lateral_ativado = false
     }
 })
+
 /* /store */
 /* ********************************************************************* */
+

@@ -25,6 +25,11 @@
         // print_r($sql);
         if($result->num_rows < 1){
             // Não existe usuário com este login e senha
+
+            // Destruir qualquer sessão criada:
+            unset($_SESSION['email']);
+            unset($_SESSION['senha']);
+
             // echo 'Acesso negado';
             header('Location: ../public/index.html');
         } else{
@@ -34,7 +39,7 @@
             $_SESSION['senha'] = $senha;
 
             // Redireciona o usuário para a página web do sistema
-            header('Location: ../public/store.html');
+            header('Location: ../public/system.php');
         }
 
     } else{

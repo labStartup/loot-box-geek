@@ -31,7 +31,7 @@
 </header>
 <!-- /navbar -->
 
-<!-- modal para form de login e cadastro -->
+<!-- modal para form de login -->
 <dialog id="modal-1">
     <div class="modal-container">
 
@@ -62,6 +62,7 @@
     </div>
 </dialog>
 
+<!-- modal para form de cadastro -->
 <dialog id="modal-2">
     <div class="modal-container">
 
@@ -72,12 +73,12 @@
 
         <section class="form-cadastro">
 
-            <form action="" method="post">
+            <form action="../src/signup.php" method="POST">
 
                 <!-- username -->
                 <label for="username">
                     Nickname </label>
-                <input 
+                <input
                     type="text"
                     name="username"
                     placeholder="Nickname"
@@ -87,15 +88,25 @@
                 <!-- email -->
                 <label for="email">
                     E-mail </label>
-                <input type="text" 
-                    name="email" 
+                <input type="text"
+                    name="email"
                     placeholder="Seu melhor e-mail"
                     maxlength="25"
                     required>
+                <!-- Aqui inserimos o valor da variável em um atributo data-* para pegar o valor de $variable do php para o js -->
+                <span
+                    id="emailMessage"
+                    style="display:none;"
+                    data-variable="<?php echo $variable; ?>"></span>
 
                 <!-- senha -->
                 <label for="senha">Senha </label>
-                <input type="password" name="senha" placeholder="•••••••••" maxlength="25">
+                <input
+                    type="password"
+                    name="senha"
+                    placeholder="•••••••••"
+                    maxlength="25"
+                    required>
 
                 <!-- submit -->
                 <input type="submit" name="submit" value="Entrar">
@@ -154,6 +165,8 @@
 
 
 <script src="assets/js/script.js"></script>
+
+
 </body>
 
 </html>
