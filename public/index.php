@@ -1,3 +1,10 @@
+<?php
+    session_start();
+
+    $variable = $_SESSION['variable'];
+    // print_r($variable);
+    
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -164,9 +171,7 @@
 </main>
 
 
-<script src="assets/js/script.js"></script>
-
-
+<script src="./assets/js/script.js"></script>
 </body>
 
 </html>
