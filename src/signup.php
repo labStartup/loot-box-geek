@@ -37,6 +37,7 @@ if (isset($_POST['submit']) && !empty($_POST['email']) && !empty($_POST['senha']
 
         header("Location: ../public/index.php");
     } else {
+        $_SESSION['variable'] = 0;
         // Aqui vai o código para inserir os dados da db.
         $insert = "INSERT INTO user_registration (id_user, username, email, password_login) VALUES ('', '$signup_username', '$signup_email', '$signup_senha')";
 
