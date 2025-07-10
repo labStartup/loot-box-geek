@@ -5,6 +5,7 @@
 }
 
 body {
+    width: 100vw;
     background-color: var(--bg-primary);
     padding: 0;
     box-sizing: border-box;
@@ -15,3 +16,4 @@ body {
     /* padding: 20px; */
     margin: 0 auto;
 }
+

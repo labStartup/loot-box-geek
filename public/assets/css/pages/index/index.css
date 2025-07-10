@@ -5,6 +5,45 @@
 @import url('partials/modal-2.css');
 
 
+#background{
+  position: fixed;
+  inset: 0;
+  
+  width: 100vw;
+  height: 100vh;
+}
+
+#background video{
+  width: 100vw;
+  height: 100%;
+  object-fit: cover;
+}
+
+#background::after{
+  content: "";
+  width: inherit;
+  height: inherit;
+  position: fixed;
+  inset: 0;
+  background: 
+  linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.9) 0%,          /* borda esquerda mais escura */
+      rgba(0, 0, 0, 0.5) 20%,         /* transição mais escura */
+      rgba(0, 0, 0, 0.2) 50%,         /* centro mais escuro */
+      rgba(0, 0, 0, 0.5) 80%,         /* transição mais escura */
+      rgba(0, 0, 0, 0.9) 100%         /* borda direita mais escura */
+    ),
+    linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.9) 0%,         /* borda superior mais escura */
+      rgba(0, 0, 0, 0.5) 20%,         /* transição mais escura */
+      rgba(0, 0, 0, 0.2) 50%,         /* centro mais escuro */
+      rgba(0, 0, 0, 0.5) 80%,         /* transição mais escura */
+      rgba(0, 0, 0, 0.9) 100%         /* borda inferior mais escura */
+    );
+}
+
 /* Estilo dos modais da página */
 dialog{
     padding: 30px;
@@ -44,4 +83,83 @@ dialog::backdrop{
     transition: .5s;
 }
 
+#hero button{
+    position: relative;
+    padding: 20px 40px;
+    background: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1;
+    overflow: hidden;
+}
 
+#hero button::before{
+    content: "";
+    position: absolute;
+    top: -2px; /* Espessura da borda */
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(90deg,rgba(41, 107, 133, 1) 0%, rgba(49, 130, 83, 1) 44%, rgba(148, 136, 44, 1) 100%);
+    background-size: 400% 400%; /* Necessário para a animação */
+    z-index: -1;
+    border-radius: 6px; /* Borda levemente arredondada */
+    opacity: 0; /* Invisível por padrão */
+    transition: opacity 0.3s;
+    animation: rotateBorder 3s linear infinite; /* Animação do gradiente */
+}
+
+#hero button:hover::before{
+    opacity: 1;
+}
+
+@keyframes rotateBorder {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+    }
+  }
+
+/* dando ruim */
+#hero button a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    /* background-color: rgba(24, 21, 16, 0.938); */
+    border: 1px solid black;
+    cursor: pointer;
+}
+/* /dando ruim */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.txt {
+  text-align: center;
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+.content {
+  display: flex;
+  width: 100%;
+  gap: 40px;
+}
+
+.separar {
+  flex: 1; /* Ocupa metade do espaço disponível */
+}
+
+.explicacao {
+  flex: 1; /* Ocupa metade do espaço disponível */
+  padding: 15px;
+}
