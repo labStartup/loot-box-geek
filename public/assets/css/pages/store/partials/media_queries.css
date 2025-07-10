@@ -1,28 +1,33 @@
 @charset "UTF-8";
 
 @media (max-width: 1215px) {
+    main { max-height: max-content; }
+
     article {
         display: grid;
         grid-template-columns: repeat(2, 400px);
         width: max-content;
+        height: 3500px;
         margin: auto;
         gap: 0px;
     }
 }
 
 @media (max-width: 760px) {
-    main {margin-top: 50px; }
+    main { 
+        margin-top: 50px;
+        max-height: max-content;
+    }
 
     article {
         display: grid;
         grid-template-columns: 250px 250px;
-        grid-template-rows: 330px 330px;
+        grid-template-rows: 350px;
+        max-height: 2500px;
         align-items: center;
     }
 
-    .produto {
-        height: 300px;
-    }
+    .produto { height: 300px; }
 
     .produto > img {
         max-width: 170px;
@@ -30,28 +35,23 @@
         margin: auto;
     }
 
-    .produto figcaption {
-        font-size: 1em;
-    }
+    .produto figcaption { font-size: .9em; }
 
     .botoes {
         position: relative;
-        top: 5%;
+        top: 13.5%;
         display: flex;
         gap: 20px;
     }
 
-    .botao {
-        padding: 1px;
-    }
+    .botao { padding: 1px; }
 
     aside {
-        position: absolute;
+        position: fixed;
         top: 0;
         left: 0;
         width: 300px;
-        height: 180vh;
-        background-color: rgb(156, 133, 0);
+        height: 100vh;
         z-index: 100;
         border-right: 4px groove #444;
     }
@@ -69,7 +69,7 @@
         cursor: pointer;
     }
 
-    aside h1 {
-        text-align: center;
-    }
+    aside h1 { text-align: center; }
+
+    #botao-menu-lateral { position: fixed; }
 }

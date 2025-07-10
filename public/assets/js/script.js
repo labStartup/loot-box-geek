@@ -87,6 +87,8 @@ if (variable === 1) {
 
 /* ************************************************************************ */
 /* store */
+// Versão 1
+/*
 const botao_menu_lateral = document.getElementById('botao-menu-lateral')
 const menu_lateral = document.getElementById('menu-lateral')
 var menu_lateral_ativado = false
@@ -128,7 +130,68 @@ botao_menu_lateral.addEventListener('click', botao => {
         menu_lateral_ativado = false
     }
 })
+*/
+const produtos = document.querySelectorAll('.produto')
+const nome_produto = document.querySelectorAll('.produto > figcaption')
+const campo_busca = document.getElementById('campo-busca')
+const botao_buscar = document.getElementById('botao-busca')
+const botao_menu_lateral = document.getElementById('botao-menu-lateral')
+const menu_lateral = document.getElementById('menu-lateral')
+var menu_lateral_visivel = false
 
+botao_menu_lateral.addEventListener('click', botao => {
+    if (!menu_lateral_visivel) {
+        botao.target.title = 'Ocultar Menu'
+        botao.target.disabled = true
+        botao.target.style.transform = 'translateX(265px)'
+        botao.target.style.transition = '0.5s ease-out'
+        menu_lateral.style.transform = 'translateX(0)'
+        menu_lateral.style.transition = '0.5s all ease-out'
+
+        setTimeout(() => { botao.target.style.transform = 'translateX(265px) scaleX(-1)' }, 800)
+
+        setTimeout(() => {
+            botao.target.style.backgroundImage = 'url("assets/img/store/products/button-close-menu.png")'
+            botao.target.style.animation = 'acenderVermelho 2s infinite';
+            botao.target.disabled = false
+        }, 1600)
+
+        menu_lateral_visivel = true
+    } else {
+        botao.target.title = 'Mostrar Menu'
+        botao.target.disabled = true
+        botao.target.style.transform = 'translateX(0)'
+        botao.target.style.transition = '0.5s ease-in'
+        menu_lateral.style.transform = 'translateX(-100%)'
+        menu_lateral.style.transition = '0.5s all ease-in'
+        
+        setTimeout(() => {
+            botao.target.style.backgroundImage = 'url("assets/img/store/products/menu_button.png")'
+            botao.target.style.animation = '';
+            botao.target.disabled = false
+        }, 1600)
+
+        menu_lateral_visivel = false
+    }
+})
+
+botao_buscar.addEventListener('click', () => {
+    const imagem_produto = document.querySelectorAll('.produto > img')
+
+    for (let [index, nome] of nome_produto.entries()) {
+        if (campo_busca.value.trim() != '') {
+            if (campo_busca.value.toLowerCase() == nome.innerHTML.toLowerCase()) {
+                imagem_produto[index].style.animation = 'destacar 0.5s linear 6'
+                // console.log('Encontrou!')
+            } else {
+                produtos[index].style.display = 'none'
+            }
+        } else {
+            imagem_produto[index].style.animation = 'none'
+            produtos[index].style.display = 'block'
+        }
+    }
+})
 /* /store */
 /* ********************************************************************* */
 
