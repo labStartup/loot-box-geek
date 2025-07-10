@@ -78,7 +78,7 @@ if (variable === 1) {
     modalCad.showModal();
     phpData.style.display = "inline";
     phpData.style.color = "red";
-    phpData.innerText = "Email já cadastrado";
+    phpData.innerText = "Email já cadastrado";    
 } else{
     phpData.sytle.disply = "none";    
 }

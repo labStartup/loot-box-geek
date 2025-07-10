@@ -1,8 +1,13 @@
 <?php
     session_start();
-
-    $variable = $_SESSION['variable'];
-    // print_r($variable);
+    
+    if(isset($_SESSION['variable'])){
+        // echo "tem";
+        $variable = $_SESSION['variable'];
+    }else{
+        // echo "não tem";
+        $variable = 0;
+    }
     
 ?>
 <!DOCTYPE html>
